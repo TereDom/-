@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'load_game_dialog.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_LoadGameDialog(object):
+    def setupUi(self, LoadGameDialog):
+        LoadGameDialog.setObjectName("LoadGameDialog")
+        LoadGameDialog.resize(400, 300)
+        self.buttonBox = QtWidgets.QDialogButtonBox(LoadGameDialog)
+        self.buttonBox.setGeometry(QtCore.QRect(10, 241, 381, 41))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Open)
+        self.buttonBox.setObjectName("buttonBox")
+        self.tableWidget = QtWidgets.QTableWidget(LoadGameDialog)
+        self.tableWidget.setGeometry(QtCore.QRect(10, 10, 381, 221))
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)
+
+        self.retranslateUi(LoadGameDialog)
+        self.buttonBox.rejected.connect(LoadGameDialog.reject)
+        self.buttonBox.accepted.connect(LoadGameDialog.accept)
+        QtCore.QMetaObject.connectSlotsByName(LoadGameDialog)
+
+    def retranslateUi(self, LoadGameDialog):
+        _translate = QtCore.QCoreApplication.translate
+        LoadGameDialog.setWindowTitle(_translate("LoadGameDialog", "Выберите партию"))
